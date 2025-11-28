@@ -1,0 +1,10 @@
+# 5. Build AAB (Dùng để upload lên Google Play Store)
+- run: flutter build appbundle --release
+  
+# 6. Upload file AAB kết quả để tải về
+- uses: actions/upload-artifact@v4
+  with:
+    name: app-release.aab
+    path: build/app/outputs/bundle/release/app-release.aab
+
+Bạn có thể tạo ra hai job riêng biệt, một cho APK (Test) và một cho AAB (Production), hoặc tôi có thể giúp bạn tinh chỉnh file YAML để dễ dàng chuyển đổi giữa các loại build này nhé!
